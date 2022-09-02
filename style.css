@@ -1,0 +1,562 @@
+/*
+ Theme Name: Softlor
+ Text Domain: softlor
+ Version: 0.1
+ Requires at least; 6.0
+ Requires PHP: 7.4
+ Author: Camille
+*/
+
+@font-face {
+  font-family: 'robotoregular';
+  src: url('assets/fonts/roboto/roboto-regular-webfont.eot');
+  src: url('assets/fonts/roboto/roboto-regular-webfont.eot?#iefix') format('embedded-opentype'),
+    url('assets/fonts/roboto/roboto-regular-webfont.woff2') format('woff2'),
+    url('assets/fonts/roboto/roboto-regular-webfont.woff') format('woff'),
+    url('assets/fonts/roboto/roboto-regular-webfont.svg#robotoregular') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'oswald_regularregular';
+  src: url('assets/fonts/oswald/oswald-regular-webfont.eot');
+  src: url('assets/fonts/oswald/oswald-regular-webfont.eot?#iefix') format('embedded-opentype'),
+    url('assets/fonts/oswald/oswald-regular-webfont.woff2') format('woff2'),
+    url('assets/fonts/oswald/oswald-regular-webfont.woff') format('woff'),
+    url('assets/fonts/oswald/oswald-regular-webfont.svg#oswald_regularregular') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'oxygenregular';
+  src: url('assets/fonts/oxygen/oxygen-webfont.eot');
+  src: url('assets/fonts/oxygen/oxygen-webfont.eot?#iefix') format('embedded-opentype'),
+    url('assets/fonts/oxygen/oxygen-webfont.woff2') format('woff2'),
+    url('assets/fonts/oxygen/oxygen-webfont.woff') format('woff'),
+    url('assets/fonts/oxygen/oxygen-webfont.svg#oxygenregular') format('svg');
+  font-weight: normal;
+  font-style: normal;
+
+}
+
+body {
+  font-family: 'robotoregular', Helvetica, Arial, serif;
+}
+
+h1 {
+  font-family: 'oswald_regularregular', Helvetica, Arial, serif;
+}
+
+/* barre de navigation */
+
+nav {
+  font-size: 1.3em;
+  font-family: 'oxygenregular', Helvetica, Arial, serif
+}
+
+nav a:hover {
+  animation: heartBeat;
+  animation-duration: 2s;
+}
+
+nav a.nav-link:hover {
+  color: white;
+  animation: heartBeat;
+  animation-duration: 2s;
+  text-decoration: underline;
+}
+
+nav a.nav-link{
+  font-family: 'oswald_regularregular', Helvetica, Arial, serif;
+}
+
+/* divider*/
+.divider {
+  width: 100px;
+  height: 2px;
+  background-color: #0369b1;
+  margin: 0 auto 20px;
+}
+
+/* footer */
+#footer  {
+  padding-left:2%;
+}
+
+#footer p {
+  padding: 0.5rem 1rem;
+  font-weight: bolder;
+}
+
+#footer .nav-link {
+  color: black;
+  font-weight: bolder;
+}
+
+#footer .nav-link:hover {
+  color: white
+}
+
+#horaires p{
+  font-weight: bold;
+  font-size: 1.3em;
+}
+
+#horaires div:first-child, #horaires div:nth-child(2){
+ border-right: solid black 2px;
+}
+
+/* -------------------------------------------
+FRONT-PAGE
+------------------------------------------- */
+
+/* bloc slider */
+section h1 {
+  text-shadow: 0 4px 8px rgba(0, 0, 0, 1);
+  font-size: 4em;
+  font-weight: bold;
+  margin-bottom: 50px;
+}
+
+section p {
+  text-shadow: 0 2px 4px rgba(0, 0, 0, 1);
+  background-color: rgba(0, 0, 0, 0.30);
+  padding: 10px 3%;
+}
+section p a {
+  color: white;
+  text-decoration: none;
+  font-size: 1.5em;
+  font-family: 'oswald_regularregular', Helvetica, Arial, serif;
+}
+
+section p a:hover {
+  color: black;
+}
+
+section img {
+  opacity: 0.5;
+}
+
+.animate {
+  animation: fadeInRightBig;
+  animation-duration: 2s;
+}
+
+/* bloc icones */
+#icone img {
+  opacity: 0.5;
+}
+
+#icone h4 {
+  font-family: 'oswald_regularregular', Helvetica, Arial, serif;
+  color: #0369b1;
+  font-size: 2em;
+  font-weight: bolder;
+}
+
+#icone img:hover {
+  animation: rotateIn;
+  animation-duration: 2s;
+}
+
+.texte h4 {
+  line-height: 50px;
+}
+
+
+/* bloc à propos */
+#logo img {
+  height: 200px;
+  width: 200px;
+}
+
+.logo {
+  animation: flip;
+  animation-duration: 3s;
+}
+
+#propos img:hover {
+  animation: pulse;
+  animation-duration: 2s;
+}
+
+/* image nous contacter */
+.fixed-bg {
+  background-image: url("http://localhost/stage/wordpress/wp-content/themes/softlor/images/finger.jpg");
+  opacity: 0.9;
+  min-height: 500px;
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+#contact {
+  font-family: 'oswald_regularregular', Helvetica, Arial, serif
+}
+
+#contacts {
+  font-size: 2em;
+  font-weight: bold;
+}
+
+#contact1 {
+  color: aliceblue;
+  text-shadow: 0 4px 8px rgba(0, 0, 0, 1);
+}
+
+#contact2 {
+  text-shadow: 0 4px 8px rgba(0, 0, 0, 1);
+  color: black;
+}
+
+#contact3 {
+  color: aliceblue;
+  text-shadow: 0 4px 8px rgba(0, 0, 0, 1);
+}
+
+/*animation de la photo*/
+.contact1 {
+
+  animation: zoomInLeft;
+  animation-duration: 2s;
+}
+
+.contact2 {
+
+  animation: zoomIn;
+  animation-duration: 2s;
+
+}
+
+.contact3 {
+  color: white;
+  animation: zoomInRight;
+  animation-duration: 2s;
+}
+
+/* -------------------------------------------
+PAGE AVEC BANNIERE
+------------------------------------------- */
+#banniere .banniere p {
+  animation: fadeInDownBig;
+  animation-duration: 2s;
+  font-family: 'oswald_regularregular', Helvetica, Arial, serif;
+  text-shadow: 0 2px 4px rgba(0, 0, 0, 1);
+  background-color: rgba(0, 0, 0, 0.30);
+  padding: 10px 3%;
+}
+
+.wp-block-group__inner-container {
+  margin: 100px;
+}
+
+/* animation des videos */
+/* iframe:hover  {
+  animation: pulse;
+  animation-duration: 2s;
+} */
+#video a {
+  color: black;
+}
+#video a:hover {
+  color: #0369b1;
+}
+
+/* les icones des pages */
+#referencement ul, #boutique ul, #info ul {
+  list-style-image: url("http://localhost/stage/wordpress/wp-content/uploads/2022/07/icons-coche.png");
+}
+
+.infogerance, .internet, .boutique, .ref {
+  margin-left: 4%;
+  margin-right: 4%;
+  text-align: justify;
+  line-height: 180%;
+  animation: fadeInUpBig;
+  animation-duration: 2s;
+}
+.ref a, .boutique a, .internet a {
+  color: black;
+}
+
+#infogerance:hover, #info:hover, #boutique:hover, #seo:hover, #referencement:hover, .site:nth-child(2n+1):hover, .site:nth-child(2n):hover{
+  animation: pulse;
+  animation-duration: 1s;
+}
+
+/* -------------------------------------------
+PAGE SITE INTERNET
+------------------------------------------- */
+#site {
+  margin: 0 50px;
+}
+
+#site h2 {
+  margin-top: 30px;
+}
+
+.site:nth-child(2n+1) {
+  animation: fadeInLeftBig;
+  animation-duration: 2s;
+}
+
+.site:nth-child(2n) {
+  animation: fadeInRightBig;
+  animation-duration: 2s;
+  background-color: white;
+}
+
+/* -------------------------------------------
+PAGE BOUTIQUE
+------------------------------------------- */
+#boutique {
+margin-left: 100px;
+}
+
+#boutique li {
+  padding-right: 30px;
+  text-align: justify;
+  animation: fadeInLeftBig;
+  animation-duration: 2s;
+}
+
+#boutique img {
+  margin-top: 50px;
+  margin-left: 100px;
+}
+
+#boutique img:hover {
+  animation: heartBeat;
+  animation-duration: 2s;
+}
+
+/* -------------------------------------------
+PAGE REFERENCEMENT
+------------------------------------------- */
+#referencement li {
+  margin-top: 20px;
+  margin-bottom: 30px;
+  text-align: justify; 
+}
+
+#seo {
+  animation: fadeInLeftBig;
+  animation-duration: 2s;
+}
+
+#referencement {
+  animation: fadeInRightBig;
+  animation-duration: 2s;
+}
+
+/* -------------------------------------------
+PAGE INFOGERANCE
+------------------------------------------- */
+#info li {
+  margin-top: 20px;
+  margin-bottom: 30px;
+  text-align: justify;
+}
+
+#info {
+  animation: fadeInLeftBig;
+  animation-duration: 2s;
+}
+
+#infogerance{
+  animation: fadeInRightBig;
+  animation-duration: 2s;
+}
+
+/* -------------------------------------------
+MEDIA QUERIES
+------------------------------------------- */
+@media screen and (min-width: 810px) and (max-width: 1300px) {
+/* bloc slider */
+section h1 {
+  font-size: 3em;
+ color:white;
+ margin-bottom: 30px;
+} 
+section p a {
+  font-size: 1.5em;
+ color: white;
+} 
+  
+  #navbarNav {
+    margin-right: 20px;
+  }
+
+  /* page d'accueil */
+  #contacts {
+    font-size: 1.8em;
+    font-weight: bold;
+  }
+
+  /* page site */
+  .wp-block-group__inner-container {
+    margin: 20px;
+  }
+
+  .wp-block-group__inner-container img {
+    height: 70%;
+    width: 70%;
+  }
+
+   /* page boutique*/
+   #boutique img {
+    margin-left: 15%;
+  }
+
+  /* page référencement */
+  #seo img {
+    height: 400px;
+    width: 400px;
+  }
+
+  /* page infogérance*/
+  #info {
+    margin: 20px;
+  }
+
+  #infogerance img {
+    height: 400px;
+    width: 400px;
+  }
+}
+
+@media screen and (min-width: 360px) and (max-width: 810px) {
+
+/* bloc slider */
+.carousel-caption{
+  top: 5%;
+}
+section h1 {
+  font-size: 1.8em;
+ color:white;
+ margin-bottom: 15px;
+} 
+section p a {
+  font-size: 1em;
+ color: white;
+} 
+
+  /* page d'accueil */
+  #propos {
+    padding: 10px;
+  }
+
+  #contacts {
+    font-size: 1.7em;
+    font-weight: bold;
+  }
+
+  /* page référencement */
+  #seo img {
+    margin-left: 50px;
+    height: 350px;
+    width: 350px;
+  }
+
+  /* page site */
+  .wp-block-group__inner-container {
+    margin: 20px;
+  }
+
+  .wp-block-group__inner-container img {
+    height: 80%;
+    width: 80%;
+  }
+
+  /* page boutique*/
+  #boutique img {
+    margin-left: 20%;
+  }
+  
+  /* page infogérance*/
+  #info {
+    margin: 20px;
+  }
+
+  #infogerance img {
+
+    height: 350px;
+    width: 350px;
+  }
+}
+
+@media screen and (max-width: 360px) {
+
+/* bloc slider */
+.carousel-caption{
+  top: 0%;
+}
+section h1 {
+  font-size: 1.2em;
+ color:white;
+ margin-bottom: -10px;
+} 
+section p a {
+  font-size: 0.7em;
+ color: white;
+} 
+#horaires div:first-child, #horaires div:nth-child(2){
+  border-right: none;
+ }
+
+  /* page d'accueil */
+  #propos {
+    padding: 10px;
+  }
+
+  #contacts {
+    font-size: 1.5em;
+    font-weight: bold;
+  }
+
+  /* bannière */
+  #banniere h3 {
+    margin: 10px;
+  }
+
+  /* page site */
+  .wp-block-group__inner-container {
+    margin: 0px;
+  }
+
+  .wp-block-group__inner-container p {
+    margin: 10px;
+  }
+
+  .wp-block-group__inner-container img {
+    height: 80%;
+    width: 80%;
+  }
+
+  /* page boutique*/
+  #boutique img {
+    margin-left: 0px;
+  }
+
+  /* page référencement */
+  #seo img {
+    margin-left: 10px;
+    height: 250px;
+    width: 250px;
+  }
+
+  /* page infogérance */
+  #infogerance img {
+
+    height: 250px;
+    width: 250px;
+  }
+
+  #info {
+    margin: 10px;
+  }
+}
